@@ -111,7 +111,7 @@ except:
 
 ## Exercises
 ```python
-# Replace space in a string with underscore
+# Replace space in string with underscore
 s = 'sublime text'
 w = s.split()
 s = '_'.join(w)
@@ -123,6 +123,11 @@ print s
 s = '   this ;is;  so;  fun  '
 w = s.split(';')
 # ... and also cleanup the whitespaces
+w = []
+for r in s.split(';'):
+    w.append(r.strip())
+```
+```python
 w = [r.strip() for r in s.split(';')]
 ```
 
